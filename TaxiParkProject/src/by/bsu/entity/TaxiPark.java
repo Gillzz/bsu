@@ -11,14 +11,16 @@ public class TaxiPark {
     private int size;
     private String name;
     private List<TaxiCar> cars;
-    private Set<TaxiDriver> driver;
+    private Set<TaxiDriver> drivers;
 
-    public TaxiPark(long taxiParkID, int size, String name, List<TaxiCar> cars, Set<TaxiDriver> driver) {
+    public TaxiPark() {}
+
+    public TaxiPark(long taxiParkID, int size, String name, List<TaxiCar> cars, Set<TaxiDriver> drivers) {
         TaxiParkID = taxiParkID;
         this.size = size;
         this.name = name;
         this.cars = cars;
-        this.driver = driver;
+        this.drivers = drivers;
     }
 
     public long getTaxiParkID() {
@@ -53,12 +55,12 @@ public class TaxiPark {
         this.cars = cars;
     }
 
-    public Set<TaxiDriver> getDriver() {
-        return driver;
+    public Set<TaxiDriver> getDrivers() {
+        return drivers;
     }
 
-    public void setDriver(Set<TaxiDriver> driver) {
-        this.driver = driver;
+    public void setDrivers(Set<TaxiDriver> driver) {
+        this.drivers = driver;
     }
 
     @Override
@@ -68,7 +70,7 @@ public class TaxiPark {
                 ", size=" + size +
                 ", name='" + name + '\'' +
                 ", cars=" + cars +
-                ", driver=" + driver +
+                ", driver=" + drivers +
                 '}';
     }
 }

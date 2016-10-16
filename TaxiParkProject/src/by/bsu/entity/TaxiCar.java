@@ -1,8 +1,5 @@
 package by.bsu.entity;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,31 +12,18 @@ public class TaxiCar extends Car {
     private String model;
     private TaxiPark park;
     private Set<TaxiDriver> drivers;
-    private int price;
 
     public TaxiCar() {}
 
-    public TaxiCar(long registrationNumber, byte numberOfDoors, int price, long carID, int age, int mileage,
-                   String model, TaxiPark park, Set<TaxiDriver> drivers) {
-        super(registrationNumber, numberOfDoors, price);
+    public TaxiCar(long registrationNumber, byte numberOfDoors, int price, int fuelCapacity, TaxiCarType type,
+                   long carID, int age, int mileage, String model, TaxiPark park, Set<TaxiDriver> drivers) {
+        super(registrationNumber, numberOfDoors, price, fuelCapacity, type);
         this.carID = carID;
         this.age = age;
         this.mileage = mileage;
         this.model = model;
         this.park = park;
         this.drivers = drivers;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public int getPrice(long TaxiCar) {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public long getCarID() {
