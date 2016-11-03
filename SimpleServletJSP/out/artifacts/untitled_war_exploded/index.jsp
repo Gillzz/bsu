@@ -14,6 +14,8 @@
   <body>
   <form action="ServletSimpleApp" method="post">
       <br><input type="submit" name="showCars" value="Our cars" />
+      <br><input type="submit" name="sortCarsByAge" value="Sort car by age" />
+      <br><input type="submit" name="sortCarsByModel" value="Sort cars by model" />
   </form>
   </body>
 </html>
