@@ -9,15 +9,13 @@
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="connection.username">root</property>
     <property name="connection.password">root</property>
-      <mapping class="by.bsu.hibernate.dao.CarsEntity"/>
-      <mapping class="by.bsu.hibernate.dao.ChargesEntity"/>
-      <mapping class="by.bsu.hibernate.dao.DestinationsEntity"/>
-      <mapping class="by.bsu.hibernate.dao.DriversEntity"/>
-      <mapping class="by.bsu.hibernate.dao.FrequentAdressesEntity"/>
-      <mapping class="by.bsu.hibernate.dao.JourneysEntity"/>
-      <mapping class="by.bsu.hibernate.dao.PickupPointsEntity"/>
-      <mapping class="by.bsu.hibernate.dao.RegularCustomersEntity"/>
-      <!-- DB schema will be updated if needed -->
-    <!-- <property name="hbm2ddl.auto">update</property> -->
+      <mapping class="by.bsu.hibernate.entity.CarsEntity"/>
+      <mapping class="by.bsu.hibernate.entity.ChargesEntity"/>
+      <mapping class="by.bsu.hibernate.entity.DestinationsEntity"/>
+      <mapping class="by.bsu.hibernate.entity.DriversEntity"/>
+      <mapping class="by.bsu.hibernate.entity.FrequentAdressesEntity"/>
+      <mapping class="by.bsu.hibernate.entity.JourneysEntity"/>
+      <mapping class="by.bsu.hibernate.entity.PickupPointsEntity"/>
+      <mapping class="by.bsu.hibernate.entity.RegularCustomersEntity"/>
   </session-factory>
 </hibernate-configuration>

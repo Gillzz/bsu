@@ -1,6 +1,6 @@
 package by.bsu.hibernate.service.impl;
-
-import by.bsu.hibernate.dao.CarsEntity;
+import by.bsu.hibernate.dao.CarsEntityDao;
+import by.bsu.hibernate.entity.CarsEntity;
 import by.bsu.hibernate.service.CarsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,26 +9,28 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by Asus on 06.11.2016.
  */
-@Service("carService")
+@Service("carsService")
 public class CarsServiceImpl implements CarsService {
     @Autowired
-    CarsEntityDao = carsEntityDao;
+    CarsEntityDao carsEntityDao;
 
-    @Override
     @Transactional
     public void persistCar(CarsEntity car) {
         carsEntityDao.persistCar(car);
     }
 
-    @Override
     @Transactional
     public void updateCar(CarsEntity car) {
-        carsEntity.updateCar(car);
+        carsEntityDao.updateCar(car);
     }
 
-    @Override
     @Transactional
-    public CarsEntity findCar(String ID) {
-        
+    public CarsEntity findCarByID(String ID) {
+        return carsEntityDao.findCarByID(ID);
+    }
+
+    @Transactional
+    public void deleteCar(CarsEntity car) {
+        carsEntityDao.deleteCar(car);
     }
 }

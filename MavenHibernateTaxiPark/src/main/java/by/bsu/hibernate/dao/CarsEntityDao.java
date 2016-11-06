@@ -1,13 +1,11 @@
-package by.bsu.hibernate.service;
+package by.bsu.hibernate.dao;
 
 import by.bsu.hibernate.entity.CarsEntity;
 
-import java.util.List;
-
 /**
- * Created by Asus on 06.11.2016.
+ * Created by Asus on 07.11.2016.
  */
-public interface CarsService {
+public interface CarsEntityDao {
     void persistCar(CarsEntity car);
     CarsEntity findCarByID(String ID);
     void updateCar(CarsEntity car);
